@@ -35,12 +35,16 @@ La funcionalidad JavaScript se centra en cuatro funciones principales:
 
 **Función validar():**
 Esta función se ejecuta cuando el usuario intenta enviar el formulario. Primero previene el envío automático del formulario para poder realizar validaciones. Luego verifica que todos los campos requeridos tengan información, marcando visualmente los campos válidos e inválidos con clases de Bootstrap. Si todos los campos están correctamente completados, llama a la función guardar(). En caso contrario, muestra un mensaje de alerta solicitando completar los datos requeridos.
+
 **Función guardar():**
 Se encarga de recopilar todos los datos ingresados en el formulario (nombre del dueño, teléfono, nombre de la mascota, tipo, edad y archivo de vacunación) y los almacena en un array llamado "datos". Cada registro se guarda como un objeto con propiedades correspondientes a cada campo del formulario. Finalmente, muestra en la consola el array actualizado con los datos.
+
 **Función limpiar():**
 Restablece el formulario a su estado inicial, eliminando todos los datos ingresados. También se encarga de eliminar las clases de validación visual (is-valid, is-invalid) e intenta ocultar el mensaje de éxito si está visible, aunque hay un error en esta parte del código.
+
 **Función limpiaValidacion():**
 Es una función auxiliar que elimina las clases de validación visual de todos los campos del formulario. Se utiliza principalmente cuando se limpia el formulario para asegurar que no queden indicadores visuales de validación.
+
 **Función verRegistros():**
 Esta función está incompleta en el código original. Actualmente solo verifica si hay registros en el array "datos" y muestra una alerta si no hay registros previos. Debería completarse para mostrar los registros en la tabla HTML.
 
