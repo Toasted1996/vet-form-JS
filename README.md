@@ -12,7 +12,7 @@ Este proyecto es un sistema de registro veterinario que permite a los dueños de
 --> JavaScript
 --> Bootstrap 5
 
-**✨ **Características****
+**✨ Características**
 
 Diseño responsivo usando Bootstrap
 Validación de formularios
@@ -21,8 +21,7 @@ Visualización de mascotas registradas
 Carga de archivos para registros de vacunación
 Funcionalidad de restablecimiento del formulario
 
-**
-🖥️ **Estructura del Código****
+**🖥️ Estructura del Código**
 **Estructura HTML**
 El proyecto cuenta con una estructura HTML organizada en diferentes secciones:
 
