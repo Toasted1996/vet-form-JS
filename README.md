@@ -1,5 +1,8 @@
 🐾 README del Proyecto Formulario Veterinario 🐾
+
+
 📋 Descripción General del Proyecto
+
 Este proyecto es un sistema de registro veterinario que permite a los dueños de mascotas registrar a sus animales a través de un formulario web fácil de usar. El sistema valida las entradas del usuario, almacena los datos y muestra las mascotas registradas en una tabla.
 🛠️ Tecnologías Utilizadas
 
