@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
+
 
 .nav-link{
     text-decoration: none;
@@ -7,6 +9,10 @@
 }
 
 
+.nav-link:hover{
+    color: #000;
+    text-decoration: underline;
+}
 
 body{
     background-image: url(assets/Untitled\ design.png);
@@ -32,4 +38,29 @@ body{
     font-size: 1.5em;
     font-family: 'sour gummy', sans-serif;
     color: #000;
+}
+
+.form-btn{
+    width: 85px;
+}
+
+.form-img{
+    width: 50%;
+    height:25%;
+    margin: 0 auto;
+    display: block;
+}
+/*Estilo index*/
+
+#b-body{
+    background-image: url(assets/bck-index.png);
+}
+
+#p-vet-index{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 120px;
+    justify-content: center;
+    display: flex;
 }

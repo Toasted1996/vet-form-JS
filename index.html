@@ -4,100 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
-    <title>Vet Form</title>
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Project Vet</title>
 </head>
 <header>
     <nav class="nav nav-bar p-3 bg-dark text-start text-light">
         <ul class="nav-bar d-flex justify-content-start list-unstyled m-0">
-            <li class="nav-item"><a class="nav-link text-light"  href="https://www.losangeles.cl/tenencia-responsable-de-mascotas/">Veterinaria Municipal</a></li>
-            <li class="nav-item"><a class="nav-link text-light"  href="https://www.losangeles.cl/adopta-a-un-amigo/">Adoptame!</a></li>
+            <li class="nav-item"><a class="nav-link text-light"
+                    href="https://www.losangeles.cl/tenencia-responsable-de-mascotas/">Veterinaria Municipal</a>
+            </li>
+            <li class="nav-item"><a class="nav-link text-light"
+                    href="https://www.losangeles.cl/adopta-a-un-amigo/">Adoptame!</a></li>
         </ul>
     </nav>
 </header>
-<body id="body-vet-form">
-<main class="text-dark text-center d p-4"> 
-    <p class="lead" id="p-vet-form">
-        Completa este formulario para registrar a tu mascota
-    </p>
-</main>
-<main class="container mb-5 bg-light text-dark text-center p-4" id="vet-form-main">
-    <div class="container mt-5 mb-5 p-4 bg-light rounded shadow-sm" id="vet-form-container">
-        <div class="text-center mb-4">
-            <img src="assets/pets.png" alt="pets icon" width="100" height="100">
-        <h1 class="text-dark">Vet Form</h1>
-        <h2  class="text-dark" id="h2-pet-info">Informacion de la Mascota</h2>
-        <form action="https://www.canva.com/design/DAGkc5DVgD0/sdQD4SE9Z5gV_Vd3p5fZSA/edit" method="POST" id="vet-form">
-            <div class="mb-3">
-                <label for="owner-name" class="form-label">Nombre del cuidador:</label>
-                <input   required type="text" class="form-control" id="owner-name" placeholder='Nombre del cuidador'>
+<body id="b-body">
+        <div class="row p-4 d-lg-flex">
+            <div class="col-6 text-center mt-5 mb-5">
+                <p class="lead p-5 d-flex" id="p-vet-index">
+                    <b>En Guauf! Cuidamos a tu mejor amigo/a
+                    <br>
+                    Nuestro servicio veterinario está diseñado para cuidar la salud y bienestar de tu mascota. 
+                    <br>
+                    <br>
+                    Contamos con un equipo de profesionales altamente capacitados y tecnología de vanguardia para ofrecerte la mejor atención posible.
+                    Desde chequeos de rutina hasta tratamientos especializados, estamos aquí para asegurarnos de que tu mascota reciba la atención que merece. 
+                    <br>
+                    <br>
+                    No dudes en contactarnos para programar una cita o para obtener más información sobre nuestros servicios.</b>
+                </p>
             </div>
-            <div class="mb-3">
-                <label for="owner-phone" class="form-label">Telefono del cuidador:</label>
-                <input  required type="number" class='form-control' id="owner-phone" placeholder="Numero del cuidador">
-            </div>   
-            <div class="mb-3">
-                <label for="pet-name" class="form-label">Nombre:</label>
-                <input  required type="text" class="form-control" id="pet-name" placeholder="Nombre de la mascota">
-            </div>
-            <div class="mb-3">
-                <label for="pet-type-selector" class="form-label">Selecciona el tipo de mascota: </label>
-                <select required name="pet-type" class="form-control" id="pet-type-selector" placeholder="tipo de mascota" default="Perro">
-                    <option value="1">Perro</option>
-                    <option value="2">Gato</option>
-                    <option value="3">Peces</option>
-                    <option value="4">Aves</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="pet-age" class="form-label">Edad de la mascota:</label>
-                <input type="number" class="form-control" id="pet-age" placeholder="Edad de la mascota">
-            </div>
-            <div class="mb-3">
-                <label for="pet-vaccines-file" class="form-label">Carnet de Vacunación</label>
-                <input type="file" class="form-control" id="pet-vaccines-file" placeholder="Cargue el carnet de vacunas">
-            </div>
-            <button type="reset" onclick="limpiar()" class="btn btn-danger" id="limpiar">Limpiar</button>
-            <button type="submit" onclick= 'validar(event)' class="btn btn-primary" id="enviar" >Enviar</button>
-        </form>
-        <br>
-        <div class="alert alert-success" id="alert" style="display:none;">
-            <strong>¡Registro exitoso!</strong> Tu mascota ha sido registrada correctamente.
-            <strong>Gracias por registrar a tu mascota</strong>
         </div>
-        <section>
-            <div>
-                <h2 id="h2-table">Mascotas Registradas</h2>
-                <div class="table-borderless table-responsive">
-                    <table class=" table table-striped table-hover table-bordered" id="table-pet-info">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Nombre del Cuidador</th>
-                                <th>Telefono del Cuidador</th>
-                                <th>Nombre de la Mascota</th>
-                                <th>Tipo de Mascota</th>
-                                <th>Edad de la Mascota</th>
-                                <th>Carnet de Vacunación</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla-registros"></tbody>
-                        </table>
-                </div>
-
-            </div>
-        </section>
-    </div>
-    </div>
-</main>
+        <div class="col-6">
+            
+        </div>
+        
+        
+    <!-- <section class="container d-flex bg-dark">
+        <div class="row">
+            <img class="" src="" alt="">
+        </div>
+    </section>     -->
 </body>
-<footer class="bg-dark text-center text-white mt-5 p-4">
-    <div>
-        <p class="text-center text-white"> Todos los derechos reservados - Giorthy López © </p>
-        <p class="text-center text-white">Veterinaria Municipal
-            <br> Caupolican 890 - Los Ángeles, Chile </p>
-    </div>
-</footer>
 </html>

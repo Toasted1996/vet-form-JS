@@ -11,7 +11,7 @@ const validar = (e) =>{
     document.querySelectorAll('.form-control').forEach(item => {
         if(item.value === ''){
             item.classList.add('is-invalid');
-            item.classList.remove('is-valid');
+            
             //Si el valor es vacio, el formulario no es valido por lo tanto es false
             formularioValido = false;          
         }else{
@@ -22,11 +22,15 @@ const validar = (e) =>{
     
     if (formularioValido){
         //Si el formulario es valido, se dispara la guardar()
+        console.table(formularioValido)
         guardar()
+
+        
     }else{
         //Si el formulario no esta completo, arroja mensaje de error
         alert('Ingrese los datos requeridos')
     }
+
 }
 
 const guardar=() => {
@@ -37,16 +41,17 @@ const guardar=() => {
     let petAge = document.getElementById('pet-age').value
     let petVaccinesFile = document.getElementById('pet-vaccines-file').value
 
-    datos.push({
-        ownerName: ownerName,
-        ownerPhone: ownerPhone,
-        petName: petName,
-        petType: petType,
-        petAge: petAge,
-        petVaccinesFile: petVaccinesFile
-    })
-    console.log(datos)
-    
+    document.getElementById('tabla-registros').innerHTML = 
+    `<tr>
+        <td>${ownerName}</td>
+        <td>${ownerPhone}</td>
+        <td>${petName}</td>
+        <td>${petType}</td>
+        <td>${petAge}</td>
+        <td>${petVaccinesFile}</td>
+        <td><button class=" form-btn btn btn-danger" onclick="eliminar(this)">Eliminar</button>
+        <butto class="form-btn btn btn-primary mt-1">Editar</button></td>
+    </tr>`
 }
 
 const limpiar = () => {
@@ -56,13 +61,11 @@ const limpiar = () => {
     limpiaValidacion()
     //Oculta el mensaje de exito si esta visible
     document.getElementById('success-message').style.display('none')
-}
 
-
-
-//Limpiar el formulario
-const limpiaValidacion= () =>{
-    document.querySelectorAll('.form-control').forEach(item=>{
+    //Oculta el mensaje de error si esta visible
+    //Aun no se oculta la validacion, se debe revisar
+    
+    document.querySelectorAll('.form-control').forEach(item => {
         if (item.value === ''){
             item.classList.remove('is-valid')
             item.classList.remove('is-invalid')
